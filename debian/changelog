@@ -1,5 +1,63 @@
-template-repository (1.0-1) unstable; urgency=medium
+nfacct (1.0.2-3) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Set debhelper-compat version in Build-Depends.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Samuel Henrique ]
+  * Bump DH to 13
+  * Bump Standards-Version to 4.5.0
+  * Add d/gbp.conf and d/salsa-ci.yml
+  * d/control: Add Rules-Requires-Root: no
+
+ -- Samuel Henrique <samueloph@debian.org>  Mon, 07 Sep 2020 00:35:41 +0100
+
+nfacct (1.0.2-2) unstable; urgency=medium
+
+  * Bump DH level to 11
+  * Bump Standards-Version to 4.2.1
+  * Change project URL to https protocol
+  * Update Vcs-* fields to salsa
+  * Update my email to @debian.org
+  * d/copyright: update debian/* entry
+  * d/control: set priority to optional, extra was deprecated on policy 4.0.1
+  * wrap-and-sort -a
+
+ -- Samuel Henrique <samueloph@debian.org>  Wed, 03 Oct 2018 18:15:18 -0300
+
+nfacct (1.0.2-1) unstable; urgency=medium
+
+  * New upstream release 1.0.2.
+  * Bump DH level to 10.
+  * Bump Standards-Version to 4.0.0.
+  * Bump watch to v4.
+  * Switch maintainer to netfilter team.
+  * d/copyright: Convert to DEP-5.
+  * d/control:
+    - Add Vcs-* fields.
+    - Require libnetfilter-acct-dev (>= 1.0.3).
+  * d/patches: drop only patch used to retrieve changelog, It was obsolete
+    (only for ver 1.0.0) and not used.
+  * d/rules: Export hardening flag to enable bindnow.
+  * wrap-and-sort -a.
+
+ -- Samuel Henrique <samueloph@debian.org>  Mon, 26 Jun 2017 00:01:06 -0300
+
+nfacct (1.0.1-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Set package priority to extra to fix priority inversion (Closes: #758229)
+
+ -- Balint Reczey <balint@balintreczey.hu>  Sun, 02 Nov 2014 00:24:17 +0100
+
+nfacct (1.0.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Bumped Standards-Version to 3.9.4
+
+ -- Laurence J. Lane <ljlane@debian.org>  Sun, 21 Jul 2013 19:44:50 -0400
+
+nfacct (1.0.0-1) unstable; urgency=low
+
+  * Initial release. Closes: #666022
+
+ -- Laurence J. Lane <ljlane@debian.org>  Thu, 25 Oct 2012 17:03:03 -0400

@@ -1,15 +1,25 @@
-Source: template-repository
-Section: unknown
+Source: nfacct
+Section: net
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Netfilter Packaging Team <pkg-netfilter-team@lists.alioth.debian.org>
+Uploaders: Laurence J. Lane <ljlane@debian.org>,
+           Samuel Henrique <samueloph@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               libmnl-dev,
+               libnetfilter-acct-dev (>= 1.0.3),
+               libnfnetlink-dev
+Standards-Version: 4.5.0
+Rules-Requires-Root: no
+Homepage: https://netfilter.org/projects/nfacct/
+Vcs-Git: https://salsa.debian.org/pkg-netfilter-team/pkg-nfacct.git
+Vcs-Browser: https://salsa.debian.org/pkg-netfilter-team/pkg-nfacct
 
-Package: template-repository
+Package: nfacct
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: netfilter accounting object tool
+ This is the command line tool to create/retrieve/delete
+ netfilter accounting objects.
+ .
+ Requires Linux kernel 3.3+ nfnetlink_acct subsystem.
